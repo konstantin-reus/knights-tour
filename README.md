@@ -71,6 +71,10 @@ src/
 3. Each move is animated on the board with a configurable delay. Visited squares turn green and display their move number.
 4. After a tour completes or gets stuck, the result is shown and the next starting position begins.
 
+## Built with
+
+This project was scaffolded and developed using [Agentic Orchestration](https://github.com/gbFinch/agentic-orchestration) -- an AI-driven workflow that chains specialized agents (vision, research, architecture, scaffolding, etc.) to go from a project brief to working code.
+
 ## License
 
 MIT
