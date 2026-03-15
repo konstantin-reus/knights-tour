@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 480px;
+  height: 480px;
+  border: 2px solid #444;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+}
+
+.cell--light {
+  background: #f0d9b5;
+  color: #333;
+}
+
+.cell--dark {
+  background: #b58863;
+  color: #222;
+}
+
+.cell--visited {
+  opacity: 0.85;
+}
+
+.cell--light.cell--visited {
+  background: #c8e6c9;
+}
+
+.cell--dark.cell--visited {
+  background: #81c784;
+}
+
+.cell--knight {
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.cell--light.cell--knight {
+  background: #fff9c4;
+}
+
+.cell--dark.cell--knight {
+  background: #fdd835;
+  color: #333;
+}
+
+/* Stats Panel */
+.stats-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 480px;
+  padding: 1rem;
+  background: #16213e;
+  border-radius: 8px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-label {
+  color: #999;
+}
+
+.stats-value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.tour-result {
+  text-align: center;
+  font-weight: 600;
+  min-height: 1.5rem;
+  padding: 0.25rem;
+}
+
+.tour-result--success {
+  color: #66bb6a;
+}
+
+.tour-result--incomplete {
+  color: #ef5350;
+}
+
+/* Speed Slider */
+.speed-slider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.speed-slider label {
+  color: #999;
+}
+
+.speed-slider input[type='range'] {
+  flex: 1;
+}
+
+.speed-slider span {
+  font-size: 0.8rem;
+  color: #777;
+}
